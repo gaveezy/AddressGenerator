@@ -71,6 +71,13 @@
             ReferencedContainer = "container:AddressGenerator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = ""
+            value = ""
+            isEnabled = "NO">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

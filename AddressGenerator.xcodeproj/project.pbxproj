@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240145EF2292FCBB00B759EE /* BitcoinCashGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240145EE2292FCBB00B759EE /* BitcoinCashGenerator.swift */; };
+		240145F12292FD2500B759EE /* BitcoinCash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240145F02292FD2500B759EE /* BitcoinCash.swift */; };
 		61689E2C7EEC96F5AAB50DB2 /* Pods_AddressGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7753C92C713B97532BDE1954 /* Pods_AddressGenerator.framework */; };
 		D218AAA82001378A004A252D /* RippleGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D218AAA72001378A004A252D /* RippleGeneratorTests.swift */; };
 		D218AAAA20013822004A252D /* PublicKeyCompressorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D218AAA920013822004A252D /* PublicKeyCompressorTests.swift */; };
@@ -65,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		240145EE2292FCBB00B759EE /* BitcoinCashGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinCashGenerator.swift; sourceTree = "<group>"; };
+		240145F02292FD2500B759EE /* BitcoinCash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinCash.swift; sourceTree = "<group>"; };
 		5063F40B8222686F291286C0 /* Pods-AddressGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddressGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AddressGenerator/Pods-AddressGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		7753C92C713B97532BDE1954 /* Pods_AddressGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AddressGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9872C9EAB1987817A1ADC5ED /* Pods-AddressGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddressGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-AddressGenerator/Pods-AddressGenerator.release.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				D218AABA20013D56004A252D /* CoinAware.swift */,
 				D218AABB20013D56004A252D /* Account.swift */,
 				D24EF2922002D78E002ECD08 /* Monero.swift */,
+				240145F02292FD2500B759EE /* BitcoinCash.swift */,
 			);
 			path = Coin;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 				D218AAC120013D56004A252D /* Pay2ScriptHashGenerator.swift */,
 				D218AAC220013D56004A252D /* InternalError.swift */,
 				D218AAC320013D56004A252D /* EthereumGenerator.swift */,
+				240145EE2292FCBB00B759EE /* BitcoinCashGenerator.swift */,
 				D218AAC420013D56004A252D /* WalletImportFormatGenerator.swift */,
 				D218AAC520013D56004A252D /* PublicKeyCompressor.swift */,
 				D218AAC620013D56004A252D /* RippleGenerator.swift */,
@@ -481,11 +487,13 @@
 				D218AAD320013D56004A252D /* Account.swift in Sources */,
 				D218AACA20013D56004A252D /* KeccakHash.swift in Sources */,
 				D25570A01FEBD51800AA443F /* WindowController.swift in Sources */,
+				240145EF2292FCBB00B759EE /* BitcoinCashGenerator.swift in Sources */,
 				D218AAD420013D56004A252D /* CoinList.swift in Sources */,
 				D218AAE220013DB8004A252D /* QRCodeGenerator.swift in Sources */,
 				D255709A1FEBCDE600AA443F /* AccountController.swift in Sources */,
 				D218AADB20013D56004A252D /* WalletImportFormatGenerator.swift in Sources */,
 				D218AADA20013D56004A252D /* EthereumGenerator.swift in Sources */,
+				240145F12292FD2500B759EE /* BitcoinCash.swift in Sources */,
 				D218E9131FE2C37800438A19 /* AppDelegate.swift in Sources */,
 				D218AAD720013D56004A252D /* SwiftBaseX.swift in Sources */,
 				D218AAD120013D56004A252D /* Ethereum.swift in Sources */,
@@ -662,7 +670,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = T78DK947F2;
+				DEVELOPMENT_TEAM = 79FZ8NGAYP;
 				INFOPLIST_FILE = AddressGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -684,7 +692,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = T78DK947F2;
+				DEVELOPMENT_TEAM = 79FZ8NGAYP;
 				INFOPLIST_FILE = AddressGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;

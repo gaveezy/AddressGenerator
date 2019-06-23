@@ -12,5 +12,6 @@ struct Account {
   let rawPrivateKey: String
   let rawPublicKey: String
   let address: String
+  let alternativeAddress: String?
   let walletImportFormat: String?
 }

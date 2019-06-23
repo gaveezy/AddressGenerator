@@ -25,6 +25,7 @@ extension Ethereum: CoinAware {
       rawPrivateKey: pair.privateKey.hexDump().toString(),
       rawPublicKey: pair.publicKey.hexDump().toString(),
       address: address,
+      alternativeAddress: nil,
       walletImportFormat: nil
     )
   }

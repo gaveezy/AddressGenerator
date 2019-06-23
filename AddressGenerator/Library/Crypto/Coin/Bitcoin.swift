@@ -34,6 +34,7 @@ extension Bitcoin: CoinAware {
       rawPrivateKey: pair.privateKey.hexDump().toString(),
       rawPublicKey: pair.publicKey.hexDump().toString(),
       address: address,
+      alternativeAddress: nil,
       walletImportFormat: wif
     )
   }

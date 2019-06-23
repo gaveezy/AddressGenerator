@@ -16,6 +16,9 @@ final class AccountController: BaseController {
 
   private let addressLabel = Label()
   private let addressValueLabel = Label()
+    
+  private let alternativeAddressLabel = Label()
+  private let alternativeAddressValueLabel = Label()
 
   private let publicKeyLabel = Label()
   private let publicKeyValueLabel = Label()
@@ -27,7 +30,7 @@ final class AccountController: BaseController {
   private let wifValueLabel = Label()
 
   private let aboutButton = NSButton()
-  private let gitHubUrl = "https://github.com/onmyway133/AddressGenerator"
+  private let gitHubUrl = "https://github.com/_"
 
   private let progressIndicator = NSProgressIndicator()
 
@@ -48,6 +51,7 @@ final class AccountController: BaseController {
     view.e_addSubviews([
       coinNameLabel, button, addressImageView,
       addressLabel, addressValueLabel,
+      alternativeAddressLabel, alternativeAddressValueLabel,
       publicKeyLabel, publicKeyValueLabel,
       privateKeyLabel, privateKeyValueLabel,
       wifLabel, wifValueLabel,
@@ -59,13 +63,14 @@ final class AccountController: BaseController {
     [addressLabel, publicKeyLabel, privateKeyLabel, wifLabel].forEach {
       $0.font = NSFont.systemFont(ofSize: 15, weight: .semibold)
     }
-    [addressValueLabel, publicKeyValueLabel, privateKeyValueLabel, wifValueLabel].forEach {
+    [addressValueLabel, alternativeAddressLabel, publicKeyValueLabel, privateKeyValueLabel, wifValueLabel].forEach {
       $0.font = NSFont.systemFont(ofSize: 15)
       $0.textColor = NSColor(e_hex: "#e67e22")
       $0.isSelectable = true
     }
 
     addressLabel.stringValue = "Address"
+    alternativeAddressLabel.stringValue = "Alternative format address"
     publicKeyLabel.stringValue = "Public Key"
     privateKeyLabel.stringValue = "Private Key"
     wifLabel.stringValue = "Private Key (Wallet Import Format)"
@@ -111,6 +116,7 @@ final class AccountController: BaseController {
 
   private func clear() {
     addressValueLabel.stringValue = ""
+    alternativeAddressValueLabel.stringValue = ""
     publicKeyValueLabel.stringValue = ""
     privateKeyValueLabel.stringValue = ""
     wifValueLabel.stringValue = ""
@@ -119,6 +125,7 @@ final class AccountController: BaseController {
 
   private func update(account: Account) {
     addressValueLabel.stringValue = account.address
+    alternativeAddressValueLabel.stringValue = account.alternativeAddress ?? ""
     publicKeyValueLabel.stringValue = account.rawPublicKey
     privateKeyValueLabel.stringValue = account.rawPrivateKey
     wifValueLabel.stringValue = account.walletImportFormat ?? ""
@@ -158,9 +165,17 @@ final class AccountController: BaseController {
       addressValueLabel.anchor.top.equal
         .to(addressLabel.anchor.bottom).constant(5),
       addressValueLabel.anchor.centerX,
+      
+      alternativeAddressLabel.anchor.top.equal
+        .to(addressValueLabel.anchor.bottom).constant(20),
+      alternativeAddressLabel.anchor.centerX,
+      
+      alternativeAddressValueLabel.anchor.top.equal
+        .to(alternativeAddressLabel.anchor.bottom).constant(5),
+      alternativeAddressValueLabel.anchor.centerX,
 
       publicKeyLabel.anchor.top.equal
-        .to(addressValueLabel.anchor.bottom).constant(20),
+        .to(alternativeAddressValueLabel.anchor.bottom).constant(20),
       publicKeyLabel.anchor.left.constant(10),
 
       publicKeyValueLabel.anchor.top.equal
