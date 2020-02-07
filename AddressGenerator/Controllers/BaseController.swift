@@ -9,8 +9,8 @@
 import AppKit
 
 class BaseController: NSViewController {
-  override func loadView() {
-    self.view = NSView()
-    self.view.wantsLayer = true
-  }
+    override func loadView() {
+        self.view = NSView()
+        self.view.wantsLayer = true
+    }
 }
